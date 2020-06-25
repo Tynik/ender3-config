@@ -1,0 +1,882 @@
+diff --git a/.github/ISSUE_TEMPLATE/bug_report.md b/.github/ISSUE_TEMPLATE/bug_report.md
+new file mode 100644
+index 000000000..48beca2c2
+--- /dev/null
++++ b/.github/ISSUE_TEMPLATE/bug_report.md
+@@ -0,0 +1,43 @@
++---
++name: Bug report
++about: Report a bug in Marlin
++title: "[BUG] (short description)"
++labels: ''
++assignees: ''
++
++---
++
++<!--
++
++Have you read Marlin's Code of Conduct? By filing an Issue, you are expected to comply with it, including treating everyone with respect: https://github.com/MarlinFirmware/Marlin/blob/master/.github/code_of_conduct.md
++
++Do you want to ask a question? Are you looking for support? Please don't post here. Instead please use one of the support links at https://github.com/MarlinFirmware/Marlin/issues/new/choose
++
++Before filing an issue be sure to test the "bugfix" branches to see whether the issue has been resolved.
++
++-->
++
++### Bug Description
++
++<!-- Description of the bug -->
++
++### My Configurations
++
++**Required:** Please include a ZIP file containing your `Configuration.h` and `Configuration_adv.h` files.
++
++### Steps to Reproduce
++
++<!-- Please describe the steps needed to reproduce the issue -->
++
++1. [First Step]
++2. [Second Step]
++3. [and so on...]
++
++**Expected behavior:** [What you expect to happen]
++
++**Actual behavior:** [What actually happens]
++
++#### Additional Information
++
++* Provide pictures or links to videos that clearly demonstrate the issue.
++* See [How Can I Contribute](#how-can-i-contribute) for additional guidelines.
+diff --git a/.github/ISSUE_TEMPLATE/config.yml b/.github/ISSUE_TEMPLATE/config.yml
+new file mode 100644
+index 000000000..4b283d260
+--- /dev/null
++++ b/.github/ISSUE_TEMPLATE/config.yml
+@@ -0,0 +1,17 @@
++blank_issues_enabled: false
++contact_links:
++  - name: Marlin Documentation
++    url: http://marlinfw.org/
++    about: Lots of documentation on installing and using Marlin.
++  - name: MarlinFirmware Facebook group
++    url: https://www.facebook.com/groups/1049718498464482
++    about: Please ask and answer questions here.
++  - name: Marlin on Discord
++    url: https://discord.gg/n5NJ59y
++    about: Join the Discord server for support and discussion.
++  - name: Marlin Discussion Forum
++    url: http://forums.reprap.org/list.php?415
++    about: A searchable web forum hosted by RepRap dot org.
++  - name: Marlin Videos on YouTube
++    url: https://www.youtube.com/results?search_query=marlin+firmware
++    about: Tutorials and more from Marlin users all around the world. Great for new users!
+diff --git a/.github/ISSUE_TEMPLATE/feature_request.md b/.github/ISSUE_TEMPLATE/feature_request.md
+new file mode 100644
+index 000000000..ff3b6b06d
+--- /dev/null
++++ b/.github/ISSUE_TEMPLATE/feature_request.md
+@@ -0,0 +1,35 @@
++---
++name: Feature request
++about: Request a Feature
++title: "[FR] (feature request title)"
++labels: ''
++assignees: ''
++
++---
++
++<!--
++
++Have you read Marlin's Code of Conduct? By filing an Issue, you are expected to comply with it, including treating everyone with respect: https://github.com/MarlinFirmware/Marlin/blob/master/.github/code_of_conduct.md
++
++Do you want to ask a question? Are you looking for support? Please don't post here. Instead please use one of the support links at https://github.com/MarlinFirmware/Marlin/issues/new/choose
++
++Before filing an issue be sure to test the "bugfix" branches to see whether the issue has been resolved.
++
++-->
++
++### Description
++
++<!-- Description of the requested feature -->
++
++### Feature Workflow
++
++<!-- Please describe the feature's behavior, user interaction, etc. -->
++
++1. [First Action]
++2. [Second Action]
++3. [and so on...]
++
++#### Additional Information
++
++* Provide pictures or links that demonstrate a similar feature or concept.
++* See [How Can I Contribute](#how-can-i-contribute) for additional guidelines.
+diff --git a/.github/issue_template.md b/.github/issue_template.md
+index ecfb36f0d..f45bd71d0 100644
+--- a/.github/issue_template.md
++++ b/.github/issue_template.md
+@@ -1,31 +1,16 @@
+-<!--
++# NO SUPPORT REQUESTS PLEASE
+ 
+-Have you read Marlin's Code of Conduct? By filing an Issue, you are expected to comply with it, including treating everyone with respect: https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.0.x/.github/code_of_conduct.md
++Support Requests posted here will be automatically closed!
+ 
+-Do you want to ask a question? Are you looking for support? Please don't post here. Instead please use the Marlin Firmware forum at http://forums.reprap.org/list.php?415 or the Marlin Facebook Group https://www.facebook.com/groups/1049718498464482/ or the Marlin Discord Server https://discord.gg/n5NJ59y.
++This Issue Queue is for Marlin bug reports and development-related issues, and we prefer not to handle user-support questions here. See https://github.com/MarlinFirmware/Marlin/blob/1.1.x/.github/contributing.md#i-dont-want-to-read-this-whole-thing-i-just-have-a-question.
+ 
+-Before filing an issue be sure to test the 1.1 and/or 2.0 "bugfix" branches to see whether the issue is already addressed.
++For best results getting help with configuration and troubleshooting, please use the following resources:
+ 
+--->
++- RepRap.org Marlin Forum http://forums.reprap.org/list.php?415
++- Tom's 3D Forums https://discuss.toms3d.org/
++- Facebook Group "Marlin Firmware" https://www.facebook.com/groups/1049718498464482/
++- Facebook Group "Marlin Firmware for 3D Printers" https://www.facebook.com/groups/3Dtechtalk/
++- Marlin Configuration https://www.youtube.com/results?search_query=marlin+configuration on YouTube
++- Marlin Discord server. Join link: https://discord.gg/n5NJ59y
+ 
+-### Description
+-
+-<!-- Description of the bug or requested feature -->
+-
+-### Steps to Reproduce
+-
+-<!-- If this is a Bug Report, please describe the steps needed to reproduce the issue -->
+-
+-1. [First Step]
+-2. [Second Step]
+-3. [and so on...]
+-
+-**Expected behavior:** [What you expect to happen]
+-
+-**Actual behavior:** [What actually happens]
+-
+-#### Additional Information
+-
+-* Include a ZIP file containing your `Configuration.h` and `Configuration_adv.h` files.
+-* Provide pictures or links to videos that clearly demonstrate the issue.
+-* See [How Can I Contribute](#how-can-i-contribute) for additional guidelines.
++After seeking help from the community, if the consensus points to to a bug in Marlin, then you should post a Bug Report at https://github.com/MarlinFirmware/Marlin/issues/new/choose).
+diff --git a/.github/labeler.yml b/.github/labeler.yml
+new file mode 100644
+index 000000000..4672316d6
+--- /dev/null
++++ b/.github/labeler.yml
+@@ -0,0 +1,18 @@
++# Add '@domain/core' label to any change within the 'core' package
++enhancement:
++  - .github
++
++# Add 'test' label to any change to *.spec.js files within the source dir
++"C: Motion":
++  - src/module/motion.*
++  - src/module/planner.*
++  - src/module/stepper.*
++
++"C: G-code Parser":
++  - src/gcode/**
++
++"PR: Configurations":
++  - config/examples/**
++
++"T: 32-Bit & HAL":
++  - src/HAL/**
+diff --git a/.github/workflows/bad-target.md b/.github/workflows/bad-target.md
+new file mode 100644
+index 000000000..048e56cfd
+--- /dev/null
++++ b/.github/workflows/bad-target.md
+@@ -0,0 +1,7 @@
++Thanks for your contribution! Unfortunately we can't accept PRs directed at release branches. We make patches to the bugfix branches and only later do we push them out as releases.
++
++Please redo this PR starting with the `bugfix-2.0.x` branch and be careful to target `bugfix-2.0.x` when resubmitting the PR.
++
++It may help to set your fork's default branch to `bugfix-2.0.x`.
++
++See [this page](http://marlinfw.org/docs/development/getting_started_pull_requests.html) for full instructions.
+diff --git a/.github/workflows/bump-date.yml b/.github/workflows/bump-date.yml
+new file mode 100644
+index 000000000..ecf4a4f0e
+--- /dev/null
++++ b/.github/workflows/bump-date.yml
+@@ -0,0 +1,34 @@
++#
++# bump-date.yml
++# Bump the distribution date once per day
++#
++
++name: Bump Distribution Date
++
++on:
++  schedule:
++    - cron: '0 0 * * *'
++
++jobs:
++  bump_date:
++
++    runs-on: ubuntu-latest
++
++    steps:
++
++    - name: Check out bugfix-2.0.x
++      uses: actions/checkout@v2
++      with:
++        ref: bugfix-2.0.x
++
++    - name: Bump Distribution Date
++      run: |
++        # Inline Bump Script
++        [[ "$GITHUB_REPOSITORY" == "MarlinFirmware/Marlin" ]] || exit 0
++        DIST=$( date +"%Y-%m-%d" )
++        eval "sed -E -i 's/(#define +STRING_DISTRIBUTION_DATE) .*$/\1 \"$DIST\"/g' Marlin/src/inc/Version.h" && \
++        git config user.name "${GITHUB_ACTOR}" && \
++        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" && \
++        git add . && \
++        git commit -m "[cron] Bump distribution date ($DIST)" && \
++        git push
+diff --git a/.github/workflows/check-pr.yml b/.github/workflows/check-pr.yml
+new file mode 100644
+index 000000000..a6246a378
+--- /dev/null
++++ b/.github/workflows/check-pr.yml
+@@ -0,0 +1,27 @@
++#
++# comment-pr.yml
++# Add a comment to any PR directed to a release branch
++#
++
++name: PR Bad Target
++
++on:
++  pull_request:
++    branches:
++    - 1.0.x
++    - 1.1.x
++    - 2.0.x
++
++jobs:
++  bad_target:
++
++    name: PR Bad Target
++    runs-on: ubuntu-latest
++
++    steps:
++      - uses: actions/checkout@v1
++      - uses: harupy/comment-on-pr@master
++        env:
++          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
++        with:
++          filename: bad-target.md
+diff --git a/.github/workflows/label-pr.yml b/.github/workflows/label-pr.yml
+new file mode 100644
+index 000000000..74a7e706c
+--- /dev/null
++++ b/.github/workflows/label-pr.yml
+@@ -0,0 +1,23 @@
++#
++# label-pr.yml
++# Automatically close the PR if it's directed to a release branch
++#
++
++name: Apply Labels
++
++on:
++  pull_request:
++    branches:
++    - bugfix-1.1.x
++    - bugfix-2.0.x
++    - dev-2.1.x
++
++jobs:
++  apply_labels:
++
++    runs-on: ubuntu-latest
++
++    steps:
++    - uses: actions/labeler@v2
++      with:
++        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+diff --git a/Marlin/Configuration.h b/Marlin/Configuration.h
+index 7c8222f01..eda1547ab 100644
+--- a/Marlin/Configuration.h
++++ b/Marlin/Configuration.h
+@@ -110,7 +110,7 @@
+  * Select a secondary serial port on the board to use for communication with the host.
+  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
+  */
+-//#define SERIAL_PORT_2 -1
++#define SERIAL_PORT_2 -1
+ 
+ /**
+  * This setting determines the communication speed of the printer.
+@@ -121,14 +121,14 @@
+  *
+  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
+  */
+-#define BAUDRATE 250000
++#define BAUDRATE 115200
+ 
+ // Enable the Bluetooth serial interface on AT90USB devices
+ //#define BLUETOOTH
+ 
+ // Choose the name from boards.h that matches your setup
+ #ifndef MOTHERBOARD
+-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
++  #define MOTHERBOARD BOARD_BTT_SKR_V1_4_TURBO
+ #endif
+ 
+ // Name displayed in the LCD "Ready" message and Info menu
+@@ -424,7 +424,7 @@
+ #define TEMP_SENSOR_5 0
+ #define TEMP_SENSOR_6 0
+ #define TEMP_SENSOR_7 0
+-#define TEMP_SENSOR_BED 0
++#define TEMP_SENSOR_BED 1
+ #define TEMP_SENSOR_PROBE 0
+ #define TEMP_SENSOR_CHAMBER 0
+ 
+@@ -468,7 +468,7 @@
+ #define HEATER_5_MAXTEMP 275
+ #define HEATER_6_MAXTEMP 275
+ #define HEATER_7_MAXTEMP 275
+-#define BED_MAXTEMP      150
++#define BED_MAXTEMP      120
+ 
+ //===========================================================================
+ //============================= PID Settings ================================
+@@ -643,7 +643,7 @@
+   //#define ENDSTOPPULLUP_XMIN
+   //#define ENDSTOPPULLUP_YMIN
+   //#define ENDSTOPPULLUP_ZMIN
+-  //#define ENDSTOPPULLUP_ZMIN_PROBE
++  #define ENDSTOPPULLUP_ZMIN_PROBE
+ #endif
+ 
+ // Enable pulldown for all endstops to prevent a floating state
+@@ -684,15 +684,15 @@
+  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
+  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
+  */
+-//#define X_DRIVER_TYPE  A4988
+-//#define Y_DRIVER_TYPE  A4988
+-//#define Z_DRIVER_TYPE  A4988
++#define X_DRIVER_TYPE  TMC2209
++#define Y_DRIVER_TYPE  TMC2209
++#define Z_DRIVER_TYPE  TMC2209
+ //#define X2_DRIVER_TYPE A4988
+ //#define Y2_DRIVER_TYPE A4988
+ //#define Z2_DRIVER_TYPE A4988
+ //#define Z3_DRIVER_TYPE A4988
+ //#define Z4_DRIVER_TYPE A4988
+-//#define E0_DRIVER_TYPE A4988
++#define E0_DRIVER_TYPE TMC2209
+ //#define E1_DRIVER_TYPE A4988
+ //#define E2_DRIVER_TYPE A4988
+ //#define E3_DRIVER_TYPE A4988
+@@ -744,14 +744,14 @@
+  * Override with M92
+  *                                      X, Y, Z, E0 [, E1[, E2...]]
+  */
+-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
++#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 405, 137.8 }
+ 
+ /**
+  * Default Max Feed Rate (mm/s)
+  * Override with M203
+  *                                      X, Y, Z, E0 [, E1[, E2...]]
+  */
+-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
++#define DEFAULT_MAX_FEEDRATE          { 150, 150, 15, 50 }
+ 
+ //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
+ #if ENABLED(LIMITED_MAX_FR_EDITING)
+@@ -764,7 +764,7 @@
+  * Override with M201
+  *                                      X, Y, Z, E0 [, E1[, E2...]]
+  */
+-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
++#define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 1500, 3000 }
+ 
+ //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
+ #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
+@@ -779,9 +779,9 @@
+  *   M204 R    Retract Acceleration
+  *   M204 T    Travel Acceleration
+  */
+-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
++#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
++#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
++#define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves
+ 
+ /**
+  * Default Jerk limits (mm/s)
+@@ -793,8 +793,8 @@
+  */
+ //#define CLASSIC_JERK
+ #if ENABLED(CLASSIC_JERK)
+-  #define DEFAULT_XJERK 10.0
+-  #define DEFAULT_YJERK 10.0
++  #define DEFAULT_XJERK 9.0
++  #define DEFAULT_YJERK 9.0
+   #define DEFAULT_ZJERK  0.3
+ 
+   //#define TRAVEL_EXTRA_XYJERK 0.0     // Additional jerk allowance for all travel moves
+@@ -828,7 +828,7 @@
+  *
+  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
+  */
+-//#define S_CURVE_ACCELERATION
++#define S_CURVE_ACCELERATION
+ 
+ //===========================================================================
+ //============================= Z Probe Options =============================
+@@ -844,10 +844,10 @@
+  * The probe replaces the Z-MIN endstop and is used for Z homing.
+  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
+  */
+-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
++//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+ 
+ // Force the use of the probe for Z-axis homing
+-//#define USE_PROBE_FOR_Z_HOMING
++#define USE_PROBE_FOR_Z_HOMING
+ 
+ /**
+  * Z_MIN_PROBE_PIN
+@@ -865,7 +865,7 @@
+  *      - normally-open switches to 5V and D32.
+  *
+  */
+-//#define Z_MIN_PROBE_PIN 32 // Pin 32 is the RAMPS default
++#define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default
+ 
+ /**
+  * Probe Type
+@@ -903,7 +903,7 @@
+ /**
+  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
+  */
+-//#define BLTOUCH
++#define BLTOUCH
+ 
+ /**
+  * Pressure sensor with a BLTouch-like interface
+@@ -980,7 +980,7 @@
+  *
+  * Specify a Probe position as { X, Y, Z }
+  */
+-#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
++#define NOZZLE_TO_PROBE_OFFSET { -41, -11, -1.47 }
+ 
+ // Most probes should stay away from the edges of the bed, but
+ // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
+@@ -1080,14 +1080,14 @@
+ // @section machine
+ 
+ // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
+-#define INVERT_X_DIR false
++#define INVERT_X_DIR true
+ #define INVERT_Y_DIR true
+ #define INVERT_Z_DIR false
+ 
+ // @section extruder
+ 
+ // For direct drive extruder v9 set to true, for geared extruder set to false.
+-#define INVERT_E0_DIR false
++#define INVERT_E0_DIR true
+ #define INVERT_E1_DIR false
+ #define INVERT_E2_DIR false
+ #define INVERT_E3_DIR false
+@@ -1105,7 +1105,7 @@
+ //#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
+                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
+ 
+-//#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
++#define Z_AFTER_HOMING  30      // (mm) Height to move to after homing Z
+ 
+ // Direction of endstops when homing; 1=MAX, -1=MIN
+ // :[-1,1]
+@@ -1116,8 +1116,8 @@
+ // @section machine
+ 
+ // The size of the print bed
+-#define X_BED_SIZE 200
+-#define Y_BED_SIZE 200
++#define X_BED_SIZE 220
++#define Y_BED_SIZE 220
+ 
+ // Travel limits (mm) after homing, corresponding to endstop positions.
+ #define X_MIN_POS 0
+@@ -1125,7 +1125,7 @@
+ #define Z_MIN_POS 0
+ #define X_MAX_POS X_BED_SIZE
+ #define Y_MAX_POS Y_BED_SIZE
+-#define Z_MAX_POS 200
++#define Z_MAX_POS 230
+ 
+ /**
+  * Software Endstops
+@@ -1153,7 +1153,7 @@
+ #endif
+ 
+ #if EITHER(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
+-  //#define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
++  #define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
+ #endif
+ 
+ /**
+@@ -1228,7 +1228,7 @@
+  */
+ //#define AUTO_BED_LEVELING_3POINT
+ //#define AUTO_BED_LEVELING_LINEAR
+-//#define AUTO_BED_LEVELING_BILINEAR
++#define AUTO_BED_LEVELING_BILINEAR
+ //#define AUTO_BED_LEVELING_UBL
+ //#define MESH_BED_LEVELING
+ 
+@@ -1236,7 +1236,7 @@
+  * Normally G28 leaves leveling disabled on completion. Enable
+  * this option to have G28 restore the prior leveling state.
+  */
+-//#define RESTORE_LEVELING_AFTER_G28
++#define RESTORE_LEVELING_AFTER_G28
+ 
+ /**
+  * Enable detailed logging of G28, G29, M48, etc.
+@@ -1275,7 +1275,7 @@
+ #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
+ 
+   // Set the number of grid points per dimension.
+-  #define GRID_MAX_POINTS_X 3
++  #define GRID_MAX_POINTS_X 4
+   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
+ 
+   // Probe along the Y axis, advancing X after each column
+@@ -1379,7 +1379,7 @@
+ // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
+ // - Prevent Z homing when the Z probe is outside bed area.
+ //
+-//#define Z_SAFE_HOMING
++#define Z_SAFE_HOMING
+ 
+ #if ENABLED(Z_SAFE_HOMING)
+   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing when homing all axes (G28).
+@@ -1465,12 +1465,12 @@
+  *   M501 - Read settings from EEPROM. (i.e., Throw away unsaved changes)
+  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
+  */
+-//#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
++#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
+ //#define DISABLE_M503        // Saves ~2700 bytes of PROGMEM. Disable for release!
+ #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
+ #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
+ #if ENABLED(EEPROM_SETTINGS)
+-  //#define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.
++  #define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.
+ #endif
+ 
+ //
+@@ -1497,13 +1497,13 @@
+ 
+ // Preheat Constants
+ #define PREHEAT_1_LABEL       "PLA"
+-#define PREHEAT_1_TEMP_HOTEND 180
+-#define PREHEAT_1_TEMP_BED     70
++#define PREHEAT_1_TEMP_HOTEND 200
++#define PREHEAT_1_TEMP_BED     55
+ #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
+ 
+-#define PREHEAT_2_LABEL       "ABS"
+-#define PREHEAT_2_TEMP_HOTEND 240
+-#define PREHEAT_2_TEMP_BED    110
++#define PREHEAT_2_LABEL       "coPET"
++#define PREHEAT_2_TEMP_HOTEND 230
++#define PREHEAT_2_TEMP_BED    60
+ #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
+ 
+ /**
+@@ -1517,7 +1517,7 @@
+  *    P1  Raise the nozzle always to Z-park height.
+  *    P2  Raise the nozzle by Z-park amount, limited to Z_MAX_POS.
+  */
+-//#define NOZZLE_PARK_FEATURE
++#define NOZZLE_PARK_FEATURE
+ 
+ #if ENABLED(NOZZLE_PARK_FEATURE)
+   // Specify a park position as { X, Y, Z_raise }
+@@ -1682,7 +1682,7 @@
+  * you must uncomment the following option or it won't work.
+  *
+  */
+-//#define SDSUPPORT
++#define SDSUPPORT
+ 
+ /**
+  * SD CARD: SPI SPEED
+@@ -2021,7 +2021,7 @@
+ // This is RAMPS-compatible using a single 10-pin connector.
+ // (For CR-10 owners who want to replace the Melzi Creality board but retain the display)
+ //
+-//#define CR10_STOCKDISPLAY
++#define CR10_STOCKDISPLAY
+ 
+ //
+ // Ender-2 OEM display, a variant of the MKS_MINI_12864
+@@ -2250,16 +2250,16 @@
+ #endif
+ 
+ // Support for Adafruit Neopixel LED driver
+-//#define NEOPIXEL_LED
++#define NEOPIXEL_LED
+ #if ENABLED(NEOPIXEL_LED)
+-  #define NEOPIXEL_TYPE   NEO_GRBW // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
+-  #define NEOPIXEL_PIN     4       // LED driving pin
++  #define NEOPIXEL_TYPE   NEO_GRB // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
++  #define NEOPIXEL_PIN     P1_24       // LED driving pin
+   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
+   //#define NEOPIXEL2_PIN    5
+-  #define NEOPIXEL_PIXELS 30       // Number of LEDs in the strip, larger of 2 strips if 2 neopixel strips are used
++  #define NEOPIXEL_PIXELS 36       // Number of LEDs in the strip, larger of 2 strips if 2 neopixel strips are used
+   #define NEOPIXEL_IS_SEQUENTIAL   // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
+   #define NEOPIXEL_BRIGHTNESS 127  // Initial brightness (0-255)
+-  //#define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
++  #define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
+ 
+   // Use a single Neopixel LED for static (background) lighting
+   //#define NEOPIXEL_BKGD_LED_INDEX  0               // Index of the LED to use
+@@ -2293,7 +2293,7 @@
+  * Set this manually if there are extra servos needing manual control.
+  * Leave undefined or set to 0 to entirely disable the servo subsystem.
+  */
+-//#define NUM_SERVOS 3 // Servo index starts with 0 for M280 command
++#define NUM_SERVOS 1 // Servo index starts with 0 for M280 command
+ 
+ // (ms) Delay  before the next move will start, to give the servo time to reach its target angle.
+ // 300ms is a good value but you can try less delay.
+diff --git a/Marlin/Configuration_adv.h b/Marlin/Configuration_adv.h
+index 07736c91c..bd90f51d4 100644
+--- a/Marlin/Configuration_adv.h
++++ b/Marlin/Configuration_adv.h
+@@ -449,7 +449,7 @@
+  * Multiple extruders can be assigned to the same pin in which case
+  * the fan will turn on when any selected extruder is above the threshold.
+  */
+-#define E0_AUTO_FAN_PIN -1
++#define E0_AUTO_FAN_PIN FAN1_PIN
+ #define E1_AUTO_FAN_PIN -1
+ #define E2_AUTO_FAN_PIN -1
+ #define E3_AUTO_FAN_PIN -1
+@@ -1141,16 +1141,16 @@
+    * an option on the LCD screen to continue the print from the last-known
+    * point in the file.
+    */
+-  //#define POWER_LOSS_RECOVERY
++  #define POWER_LOSS_RECOVERY
+   #if ENABLED(POWER_LOSS_RECOVERY)
+     #define PLR_ENABLED_DEFAULT   false // Power Loss Recovery enabled by default. (Set with 'M413 Sn' & M500)
+-    //#define BACKUP_POWER_SUPPLY       // Backup power / UPS to move the steppers on power loss
+-    //#define POWER_LOSS_ZRAISE       2 // (mm) Z axis raise on resume (on power loss with UPS)
+-    //#define POWER_LOSS_PIN         44 // Pin to detect power loss. Set to -1 to disable default pin on boards without module.
++    #define BACKUP_POWER_SUPPLY       // Backup power / UPS to move the steppers on power loss
++    #define POWER_LOSS_ZRAISE       2 // (mm) Z axis raise on resume (on power loss with UPS)
++    #define POWER_LOSS_PIN         P1_25 // Pin to detect power loss. Set to -1 to disable default pin on boards without module.
+     //#define POWER_LOSS_STATE     HIGH // State of pin indicating power loss
+     //#define POWER_LOSS_PULL           // Set pullup / pulldown as appropriate
+-    //#define POWER_LOSS_PURGE_LEN   20 // (mm) Length of filament to purge on resume
+-    //#define POWER_LOSS_RETRACT_LEN 10 // (mm) Length of filament to retract on fail. Requires backup power.
++    #define POWER_LOSS_PURGE_LEN   20 // (mm) Length of filament to purge on resume
++    #define POWER_LOSS_RETRACT_LEN 10 // (mm) Length of filament to retract on fail. Requires backup power.
+ 
+     // Without a POWER_LOSS_PIN the following option helps reduce wear on the SD card,
+     // especially with "vase mode" printing. Set too high and vases cannot be continued.
+@@ -1283,7 +1283,7 @@
+    *
+    * :[ 'LCD', 'ONBOARD', 'CUSTOM_CABLE' ]
+    */
+-  //#define SDCARD_CONNECTION LCD
++  #define SDCARD_CONNECTION ONBOARD
+ 
+ #endif // SDSUPPORT
+ 
+@@ -1593,12 +1593,12 @@
+  *
+  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
+  */
+-//#define LIN_ADVANCE
++#define LIN_ADVANCE
+ #if ENABLED(LIN_ADVANCE)
+   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
+-  #define LIN_ADVANCE_K 0.22    // Unit: mm compression per 1mm/s extruder speed
++  #define LIN_ADVANCE_K 0    // Unit: mm compression per 1mm/s extruder speed
+   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
+-  //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
++  #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
+ #endif
+ 
+ // @section leveling
+@@ -1833,7 +1833,7 @@
+ #if BOTH(SDSUPPORT, DIRECT_STEPPING)
+   #define BLOCK_BUFFER_SIZE  8
+ #elif ENABLED(SDSUPPORT)
+-  #define BLOCK_BUFFER_SIZE 16
++  #define BLOCK_BUFFER_SIZE 32
+ #else
+   #define BLOCK_BUFFER_SIZE 16
+ #endif
+@@ -2030,14 +2030,14 @@
+  * Requires NOZZLE_PARK_FEATURE.
+  * This feature is required for the default FILAMENT_RUNOUT_SCRIPT.
+  */
+-//#define ADVANCED_PAUSE_FEATURE
++#define ADVANCED_PAUSE_FEATURE
+ #if ENABLED(ADVANCED_PAUSE_FEATURE)
+-  #define PAUSE_PARK_RETRACT_FEEDRATE         60  // (mm/s) Initial retract feedrate.
+-  #define PAUSE_PARK_RETRACT_LENGTH            2  // (mm) Initial retract.
++  #define PAUSE_PARK_RETRACT_FEEDRATE         25  // (mm/s) Initial retract feedrate.
++  #define PAUSE_PARK_RETRACT_LENGTH            4  // (mm) Initial retract.
+                                                   // This short retract is done immediately, before parking the nozzle.
+   #define FILAMENT_CHANGE_UNLOAD_FEEDRATE     10  // (mm/s) Unload filament feedrate. This can be pretty fast.
+   #define FILAMENT_CHANGE_UNLOAD_ACCEL        25  // (mm/s^2) Lower acceleration may allow a faster feedrate.
+-  #define FILAMENT_CHANGE_UNLOAD_LENGTH      100  // (mm) The length of filament for a complete unload.
++  #define FILAMENT_CHANGE_UNLOAD_LENGTH      30   // (mm) The length of filament for a complete unload.
+                                                   //   For Bowden, the full length of the tube and nozzle.
+                                                   //   For direct drive, the full length of the nozzle.
+                                                   //   Set to 0 for manual unloading.
+@@ -2207,7 +2207,7 @@
+   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
+ 
+   #if AXIS_IS_TMC(X)
+-    #define X_CURRENT       800        // (mA) RMS current. Multiply by 1.414 for peak current.
++    #define X_CURRENT       580        // (mA) RMS current. Multiply by 1.414 for peak current.
+     #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
+     #define X_MICROSTEPS     16    // 0..256
+     #define X_RSENSE          0.11
+@@ -2223,7 +2223,7 @@
+   #endif
+ 
+   #if AXIS_IS_TMC(Y)
+-    #define Y_CURRENT       800
++    #define Y_CURRENT       580
+     #define Y_CURRENT_HOME  Y_CURRENT
+     #define Y_MICROSTEPS     16
+     #define Y_RSENSE          0.11
+@@ -2239,7 +2239,7 @@
+   #endif
+ 
+   #if AXIS_IS_TMC(Z)
+-    #define Z_CURRENT       800
++    #define Z_CURRENT       580
+     #define Z_CURRENT_HOME  Z_CURRENT
+     #define Z_MICROSTEPS     16
+     #define Z_RSENSE          0.11
+@@ -2271,7 +2271,7 @@
+   #endif
+ 
+   #if AXIS_IS_TMC(E0)
+-    #define E0_CURRENT      800
++    #define E0_CURRENT      650
+     #define E0_MICROSTEPS    16
+     #define E0_RSENSE         0.11
+     #define E0_CHAIN_POS     -1
+@@ -2416,7 +2416,7 @@
+    * Define you own with
+    * { <off_time[1..15]>, <hysteresis_end[-3..12]>, hysteresis_start[1..8] }
+    */
+-  #define CHOPPER_TIMING CHOPPER_DEFAULT_12V
++  #define CHOPPER_TIMING CHOPPER_DEFAULT_24V
+ 
+   /**
+    * Monitor Trinamic drivers
+diff --git a/Marlin/Version.h b/Marlin/Version.h
+index 2d4a8e9b5..395cf272c 100644
+--- a/Marlin/Version.h
++++ b/Marlin/Version.h
+@@ -28,7 +28,7 @@
+ /**
+  * Marlin release version identifier
+  */
+-//#define SHORT_BUILD_VERSION "bugfix-2.0.x"
++//#define SHORT_BUILD_VERSION "2.0.5.3"
+ 
+ /**
+  * Verbose version identifier which should contain a reference to the location
+@@ -41,7 +41,7 @@
+  * here we define this default string as the date where the latest release
+  * version was tagged.
+  */
+-//#define STRING_DISTRIBUTION_DATE "2019-07-10"
++//#define STRING_DISTRIBUTION_DATE "2020-01-31"
+ 
+ /**
+  * Defines a generic printer name to be output to the LCD after booting Marlin.
+diff --git a/Marlin/src/inc/Version.h b/Marlin/src/inc/Version.h
+index 2c7766f31..33ce58171 100644
+--- a/Marlin/src/inc/Version.h
++++ b/Marlin/src/inc/Version.h
+@@ -25,7 +25,7 @@
+  * Release version. Leave the Marlin version or apply a custom scheme.
+  */
+ #ifndef SHORT_BUILD_VERSION
+-  #define SHORT_BUILD_VERSION "bugfix-2.0.x"
++  #define SHORT_BUILD_VERSION "2.0.5.3"
+ #endif
+ 
+ /**
+diff --git a/config/README.md b/config/README.md
+index be986b705..f4dfd9aed 100644
+--- a/config/README.md
++++ b/config/README.md
+@@ -1,3 +1,3 @@
+ # Where have all the configurations gone?
+ 
+-## https://github.com/MarlinFirmware/Configurations/archive/bugfix-2.0.x.zip
++## https://github.com/MarlinFirmware/Configurations/archive/release-2.0.5.zip
+diff --git a/run.sh b/run.sh
+new file mode 100644
+index 000000000..8e2819e8e
+--- /dev/null
++++ b/run.sh
+@@ -0,0 +1,40 @@
++#!/usr/bin/env bash
++
++#PIO Build	    platformio run -e target_env
++#PIO Clean	    platformio run –target clean -e target_env
++#PIO Upload	    platformio run –target upload -e target_env
++#PIO Traceback	platformio run –target upload -e target_env
++#PIO Program	platformio run –target program -e target_env
++#PIO Test	    platformio test upload -e target_env
++#PIO Remote	    platformio remote run –target upload -e target_env
++#PIO Debug	    platformio debug -e target_env
++
++build () {
++    pio run -e ${1}
++}
++
++command=$1
++
++for argument in "$@"
++do
++  case "$argument" in
++    --env=*)
++      env=${argument#*=}
++      shift
++  ;;
++    *)
++  ;;
++  esac
++done
++
++case "$command" in
++  build)
++    build ${env}
++;;
++  *)
++    echo "Command ${command} was not implemented!" >&2
++    exit 1
++;;
++esac
++
++exit 0
